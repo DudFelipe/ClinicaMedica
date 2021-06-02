@@ -9,6 +9,8 @@ namespace ClinicaMedica.Business.Interfaces.Repositories
 {
     public interface IMedicoRepository : IRepository<Medico>
     {
-        Task<Medico> ObterMedicoPorEspecialidade(Guid especialidadeId);
+        Task<IEnumerable<Medico>> ObterMedicosPorEspecialidade(Guid especialidadeId);
+        Task<IEnumerable<Medico>> ObterMedicosPorEspecialidades();
+        Task<Medico> ObterMedicoEspecialidade(Guid id);
     }
 }

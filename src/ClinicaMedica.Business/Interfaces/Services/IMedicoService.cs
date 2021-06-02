@@ -11,6 +11,10 @@ namespace ClinicaMedica.Business.Interfaces.Services
     {
         public Task Adicionar(Medico medico);
         public Task Atualizar(Medico medico);
+        Task<IEnumerable<Medico>> ObterMedicosPorEspecialidade(Guid especialidadeId);
+        Task<IEnumerable<Medico>> ObterMedicosPorEspecialidades();
+        Task<Medico> ObterMedicoEspecialidade(Guid id);
+        public Task<Medico> ObterPorId(Guid id);
         public Task Remover(Guid id);
         public void Dispose();
     }

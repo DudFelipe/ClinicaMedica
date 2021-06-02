@@ -28,6 +28,26 @@ namespace ClinicaMedica.Business.Services
             await _medicoRepository.Atualizar(medico);
         }
 
+        public async Task<IEnumerable<Medico>> ObterMedicosPorEspecialidade(Guid especialidadeId)
+        {
+            return await _medicoRepository.ObterMedicosPorEspecialidade(especialidadeId);
+        }
+
+        public async Task<IEnumerable<Medico>> ObterMedicosPorEspecialidades()
+        {
+            return await _medicoRepository.ObterMedicosPorEspecialidades();
+        }
+
+        public async Task<Medico> ObterMedicoEspecialidade(Guid id)
+        {
+            return await _medicoRepository.ObterMedicoEspecialidade(id);
+        }
+
+        public async Task<Medico> ObterPorId(Guid id)
+        {
+            return await _medicoRepository.ObterPorId(id);
+        }
+
         public async Task Remover(Guid id)
         {
             await _medicoRepository.Remover(id);

@@ -17,11 +17,26 @@ namespace ClinicaMedica.Data.Repository
 
         }
 
-        public async Task<Medico> ObterMedicoPorEspecialidade(Guid especialidadeId)
+        public async Task<Medico> ObterMedicoEspecialidade(Guid id)
         {
-            return await Db.Medicos.AsNoTracking()
+            return await Db.Medicos
+                .AsNoTracking()
                 .Include(e => e.Especialidade)
-                .FirstOrDefaultAsync(m => m.EspecialidadeId == especialidadeId);
+                .FirstOrDefaultAsync();
+        }
+
+        public async Task<IEnumerable<Medico>> ObterMedicosPorEspecialidade(Guid especialidadeId)
+        {
+            return await Buscar(m => m.EspecialidadeId == especialidadeId);
+        }
+
+        public async Task<IEnumerable<Medico>> ObterMedicosPorEspecialidades()
+        {
+            return await Db.Medicos
+                .AsNoTracking()
+                .Include(e => e.Especialidade)
+                .OrderBy(m => m.Nome)
+                .ToListAsync();
         }
     }
 }

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicaMedica.App", "src\ClinicaMedica.App\ClinicaMedica.App.csproj", "{E5000BE7-071E-4EF2-8F07-CA12D88D81C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicaMedica.Application", "src\ClinicaMedica.App\ClinicaMedica.Application.csproj", "{E5000BE7-071E-4EF2-8F07-CA12D88D81C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicaMedica.Business", "src\ClinicaMedica.Business\ClinicaMedica.Business.csproj", "{F9A91250-468A-4743-923D-D258D5DF0B68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicaMedica.Business", "src\ClinicaMedica.Business\ClinicaMedica.Business.csproj", "{F9A91250-468A-4743-923D-D258D5DF0B68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicaMedica.Data", "src\ClinicaMedica.Data\ClinicaMedica.Data.csproj", "{34EA8049-9940-4AB0-AA4C-81B0DD63FA7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicaMedica.Data", "src\ClinicaMedica.Data\ClinicaMedica.Data.csproj", "{34EA8049-9940-4AB0-AA4C-81B0DD63FA7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
