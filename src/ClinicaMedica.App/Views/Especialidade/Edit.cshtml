@@ -1,0 +1,33 @@
+﻿@model ClinicaMedica.App.ViewModels.EspecialidadeViewModel
+
+@{
+    ViewData["Title"] = "Editar especialidade " + Model.Descricao;
+}
+
+<div class="row">
+    <h2>Editar especialidade <span class="text-danger">@Model.Descricao</span></h2>
+</div>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Descricao" class="control-label"></label>
+                <input asp-for="Descricao" class="form-control" />
+                <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-success" /> &nbsp;
+                <a asp-action="Index" class="btn btn-primary">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
