@@ -12,6 +12,9 @@ namespace ClinicaMedica.Business.Interfaces.Services
         public Task Adicionar(Paciente paciente);
         public Task Atualizar(Paciente paciente);
         public Task AtualizarEndereco(Endereco endereco);
+        Task<IEnumerable<Paciente>> ObterPacientesPorEndereco(Guid enderecoId);
+        Task<IEnumerable<Paciente>> ObterPacientesPorEndereco();
+        Task<Paciente> ObterPacienteEndereco(Guid id);
         public Task Remover(Guid id);
         public void Dispose();
     }

@@ -13,6 +13,6 @@ namespace ClinicaMedica.App.Data
             : base(options)
         {
         }
-        public DbSet<ClinicaMedica.App.ViewModels.MedicoViewModel> MedicoViewModel { get; set; }
+        public DbSet<ClinicaMedica.App.ViewModels.EnderecoViewModel> EnderecoViewModel { get; set; }
     }
 }

@@ -44,5 +44,20 @@ namespace ClinicaMedica.Business.Services
         {
             _pacienteRepository?.Dispose();
         }
+
+        public async Task<IEnumerable<Paciente>> ObterPacientesPorEndereco(Guid enderecoId)
+        {
+            return await _pacienteRepository.ObterPacientesPorEndereco(enderecoId);
+        }
+
+        public async Task<IEnumerable<Paciente>> ObterPacientesPorEndereco()
+        {
+            return await _pacienteRepository.ObterPacientesPorEndereco();
+        }
+
+        public async Task<Paciente> ObterPacienteEndereco(Guid id)
+        {
+            return await _pacienteRepository.ObterPacienteEndereco(id);
+        }
     }
 }

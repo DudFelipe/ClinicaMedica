@@ -23,5 +23,19 @@ namespace ClinicaMedica.Data.Repository
                     .Include(e => e.Endereco)
                     .FirstOrDefaultAsync(p => p.Id == id);
         }
+
+        public async Task<IEnumerable<Paciente>> ObterPacientesPorEndereco(Guid enderecoId)
+        {
+            return await Buscar(p => p.Endereco.Id == enderecoId);
+        }
+
+        public async Task<IEnumerable<Paciente>> ObterPacientesPorEndereco()
+        {
+            return await Db.Pacientes
+                .AsNoTracking()
+                .Include(e => e.Endereco)
+                .OrderBy(p => p.Nome)
+                .ToListAsync();
+        }
     }
 }
